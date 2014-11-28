@@ -166,6 +166,7 @@ $(document).ready(function() {
 		$('body').scrollTop(bh);
 		return false;
 	});
+	$('.zoom').fancybox();
 	$('input, textarea').each(function () {
 		$(this).data('holder',$(this).attr('placeholder'));
 		$(this).focusin(function(){
@@ -177,14 +178,5 @@ $(document).ready(function() {
 	});
 	$('.team li:nth-child(5n), .content .products > ul li:nth-child(4n), .recipeslist li:nth-child(3n)').css({
 		'margin-right': '-3px'
-	});
-});
-$(window).load(function() {
-	$('.content .description').each(function() {
-		$(this).css({
-			'-webkit-border-radius': '20px/'+Math.floor($(this).outerHeight()/2)+'px',
-			'-moz-border-radius': '20px/'+Math.floor($(this).outerHeight()/2)+'px',
-			'border-radius': '20px/'+Math.floor($(this).outerHeight()/2)+'px'
-		});
 	});
 });

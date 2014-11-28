@@ -184,10 +184,6 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:0;
 	top:12px;
-	transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
 }
 .header.fixed .logo .big {
 	margin-top:-134px;
@@ -197,10 +193,6 @@ button::-moz-focus-inner {
 	left:13px;
 	top:13px;
 	margin:188px 0 0 0;
-	transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
 }
 .header.fixed .logo .small {
 	margin-top:0;
@@ -766,8 +758,11 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:0;
 	top:0;
-    min-width:139px;
-	min-height:140px;
+    width:139px;
+	height:140px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
 }
 .quality .jcarousel-item:last-child {
 	margin-right:0;
@@ -1488,9 +1483,9 @@ button::-moz-focus-inner {
 	padding:36px 70px 10px 310px;
 	margin:59px 0 56px;
 	background:url('../img/desciption_bg.png') repeat;
-	-webkit-border-radius:20px/109px;
-	-moz-border-radius:20px/109px;
-	border-radius:20px/109px;
+	-webkit-border-radius:20px/50%;
+	-moz-border-radius:20px/50%;
+	border-radius:20px/50%;
 	-webkit-box-shadow:7px 7px 15px rgba(0,0,0,0.2);
 	-moz-box-shadow:7px 7px 15px rgba(0,0,0,0.2);
 	box-shadow:7px 7px 15px rgba(0,0,0,0.2);
