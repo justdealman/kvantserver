@@ -179,4 +179,21 @@ $(document).ready(function() {
 	$('.team li:nth-child(5n), .content .products > ul li:nth-child(4n), .recipeslist li:nth-child(3n)').css({
 		'margin-right': '-3px'
 	});
+	$('.news > div > div').each(function() {
+		if ( $(this).children('img').length > 0 ) {
+			$(this).css({
+				'min-height': '80px',
+				'padding-left': '100px'
+			});
+		}
+	});
+});
+$(window).load(function() {
+	$('.news > div > div').each(function() {
+		if ( $(this).children('p').height() < 80 && $(this).children('img').length > 0 ) {
+			$(this).children('p').css({
+				'padding-top': (80-$(this).children('p').height())/2+'px'
+			});
+		}
+	});
 });
