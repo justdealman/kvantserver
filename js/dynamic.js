@@ -156,14 +156,18 @@ $(document).ready(function() {
 			'border-radius': '20px/'+Math.floor($('.modal').outerHeight()/2)+'px'
 		});
 		$('.fade, .modal').stop(true,true).fadeIn(500);
-		bh = $('body').scrollTop();
+		bh = $(window).scrollTop();
 		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		if ( bh > 68 ) {
+			$('.header, .submenu').addClass('up');
+		}
 		return false;
 	});
 	$('.modal .close, .fade').bind('click', function() {
 		$('.fade, .modal').stop(true,true).fadeOut(500);
 		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
-		$('body').scrollTop(bh);
+		$(window).scrollTop(bh);
+		$('.header, .submenu').removeClass('up');
 		return false;
 	});
 	$('.zoom').fancybox();

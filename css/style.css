@@ -156,7 +156,7 @@ button::-moz-focus-inner {
 	-moz-box-shadow:0 5px 5px rgba(0,0,0,0.1);
 	box-shadow:0 5px 5px rgba(0,0,0,0.1);
 }
-.header.fixed {
+.header.fixed, .header.up {
 	position:fixed;
 }
 .header > div {
@@ -165,7 +165,7 @@ button::-moz-focus-inner {
 	height:136px;
 	margin:0 auto;
 }
-.header.fixed > div {
+.header.fixed > div, .header.up > div {
 	height:68px;
 }
 .header .logo {
@@ -177,7 +177,7 @@ button::-moz-focus-inner {
 	height:136px;
 	margin-left:-56px;
 }
-.header.fixed .logo {
+.header.fixed .logo, .header.up .logo {
 	height:68px;
 }
 .header .logo .big {
@@ -185,7 +185,7 @@ button::-moz-focus-inner {
 	left:0;
 	top:12px;
 }
-.header.fixed .logo .big {
+.header.fixed .logo .big, .header.up .logo .big {
 	margin-top:-134px;
 }
 .header .logo .small {
@@ -194,7 +194,7 @@ button::-moz-focus-inner {
 	top:13px;
 	margin:188px 0 0 0;
 }
-.header.fixed .logo .small {
+.header.fixed .logo .small, .header.up .logo .small {
 	margin-top:0;
 }
 .header .search {
@@ -230,7 +230,7 @@ button::-moz-focus-inner {
 .header .search.opened {
 	width:392px;
 }
-.header.fixed .search {
+.header.fixed .search, .header.up .search {
 	display:none;
 }
 .header .search button {
@@ -275,7 +275,7 @@ button::-moz-focus-inner {
 	font-family:'Roboto Slab', sans-serif;
 	text-align:right;
 }
-.header.fixed .contacts {
+.header.fixed .contacts, .header.up .contacts {
 	display:none;
 }
 .header .contacts h3 {
@@ -300,7 +300,7 @@ button::-moz-focus-inner {
 	margin:0;
 	border-top:1px solid rgba(0,0,0,0.11);
 }
-.header.fixed .nav {
+.header.fixed .nav, .header.up .nav {
 	top:0;
 	border-top-width:0;
 }
@@ -372,7 +372,7 @@ button::-moz-focus-inner {
 	-moz-box-shadow:0 5px 5px rgba(0,0,0,0.1);
 	box-shadow:0 5px 5px rgba(0,0,0,0.1);
 }
-.submenu.fixed {
+.submenu.fixed, .submenu.up {
 	position:fixed;
 	top:68px;
 }
@@ -1112,10 +1112,13 @@ button::-moz-focus-inner {
 }
 .team li > div img {
 	position:absolute;
-	right:0;
-	bottom:0;
 	left:0;
-	margin:auto;
+	top:0;
+	width:178px;
+	height:178px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
 }
 .team li h3 {
 	color:#a84b39;
@@ -1905,11 +1908,11 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:0;
 	top:0;
-	bottom:0;
-	left:0;
-	min-width:198px;
-	min-height:198px;
-	margin:auto;
+	width:198px;
+	height:198px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
 }
 .recipeslist li h3 {
 	display:inline-block;
