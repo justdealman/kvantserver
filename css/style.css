@@ -442,7 +442,7 @@ button::-moz-focus-inner {
 
 .slider {
 	position:relative;
-	width:960px;
+	width:1920px;
 	height:468px;
 	margin:0 auto 31px;
 }
@@ -455,57 +455,61 @@ button::-moz-focus-inner {
 	margin-top:-11px;
 }
 .slider .prev {
-	left:33px;
+	left:50%;
+	margin-left:-480px;
 	background:url('../img/slider_arrows.png') no-repeat left top;
 }
 .slider .next {
-	right:33px;
+	right:50%;
+	margin-right:-480px;
 	background:url('../img/slider_arrows.png') no-repeat left -22px;
 }
-.slider .container, .slider .container > div > div {
+.slider .container {
 	position:relative;
 	clear:both;
 	overflow:hidden;
-	width:960px;
+	width:1920px;
 	height:468px;
 	background:#ffffff;
 }
+.slider .container > div > div {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	height:468px;
+}
 .slider .container > div > div > img {
-	position:absolute;
-	right:0;
-	bottom:0;
-	left:0;
-	max-width:960px;
-	max-height:468px;
-	margin:auto;
+	display:none;
+}
+.slider .container > div > div > div {
+	width:960px;
+	height:468px;
 }
 .slider .container > div > div > div {
 	position:absolute;
-	left:0;
-	bottom:0;
-	z-index:1;
-	min-height:111px;
-	color:#ffffff;
+	left:50%;
+	top:30px;
+	width:250px;
 	font-family:'Roboto Slab', sans-serif;
-	padding:19px 0 12px;
-	background:url('../img/slider_div.png') repeat;
+	margin-left:-400px;
+}
+.slider .temp {
+	display:none;
 }
 .slider h3 {
+	color:#a84b39;
 	font-size:26px;
 	line-height:29px;
 	padding:0;
-	margin:0 202px 11px 32px;
+	margin:0 0 18px;
 }
 .slider p {
 	min-height:60px;
-	font-size:16px;
-	line-height:20px;
-	margin:0 202px 11px 32px;
+	font-size:14px;
+	line-height:18px;
+	margin:0 0 18px;
 }
 .slider button {
-	position:absolute;
-	right:31px;
-	bottom:31px;
 	color:#ffffff;
 	font-size:14px;
 	line-height:17px;
@@ -513,6 +517,7 @@ button::-moz-focus-inner {
 	font-family:'Roboto Slab', sans-serif;
 	cursor:pointer;
 	padding:11px 16px 12px 15px;
+	margin:6px 0 0;
 	background:url('../img/button_bg.png') repeat-x top;
 	-webkit-border-radius:20px;
 	-moz-border-radius:20px;
